@@ -5,3 +5,4 @@ numpy
 Pillow
 scikit-learn
 joblib
+ultralytics==8.3.116
