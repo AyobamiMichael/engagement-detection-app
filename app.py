@@ -20,7 +20,7 @@ YOLO_CONFIDENCE = 0.5
 # ------------- MODELS -------------
 @st.cache_resource
 def load_models():
-    engagement_model = joblib.load(r"C:\Users\EngagementDetector\engagement_detector.pkl")
+    engagement_model = joblib.load("engagement_detector.pkl")
     pose_detector = mp.solutions.pose.Pose(static_image_mode=True, min_detection_confidence=0.3)
     yolo_model = YOLO("yolov8n.pt")
     return engagement_model, pose_detector, yolo_model
