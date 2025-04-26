@@ -1,11 +1,4 @@
-import warnings
-warnings.filterwarnings("ignore")
-
 import streamlit as st
-st.set_option('deprecation.showPyplotGlobalUse', False)
-st.set_option('deprecation.showfileUploaderEncoding', False)
-st.set_option('deprecation.showImageWidth', False)
-
 import numpy as np
 import cv2
 import mediapipe as mp
@@ -97,7 +90,7 @@ def process_image(image_np):
                 cv2.putText(image_display, f"{label} ({proba:.2f})", (x1, y1-10),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2)
 
-    st.image(image_display[..., ::-1], caption="Processed Image", use_column_width=True)
+    st.image(image_display[..., ::-1], caption="Processed Image", use_container_width=True)
 
 import pandas as pd
 
