@@ -93,7 +93,7 @@ def process_image(image_np):
                 cv2.putText(image_display, f"{label} ({proba:.2f})", (x1, y1-10),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2)
 
-    st.image(image_display[..., ::-1], caption="Processed Image", use_column_width=True)
+    st.image(image_display[..., ::-1], caption="Processed Image", use_container_width=True)
 
 import pandas as pd
 
@@ -140,7 +140,7 @@ def process_video(video_file):
                         engaged_in_frame += 1
                     total_people += 1
 
-            stframe.image(frame[..., ::-1], channels="RGB", use_column_width=True)
+            stframe.image(frame[..., ::-1], channels="RGB", use_container_width=True)
 
             if total_people > 0:
                 engagement_pct = (engaged_in_frame / total_people) * 100
