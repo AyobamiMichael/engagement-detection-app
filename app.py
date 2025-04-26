@@ -1,4 +1,11 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 import streamlit as st
+st.set_option('deprecation.showPyplotGlobalUse', False)
+st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_option('deprecation.showImageWidth', False)
+
 import numpy as np
 import cv2
 import mediapipe as mp
