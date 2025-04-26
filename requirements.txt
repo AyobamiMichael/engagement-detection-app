@@ -6,3 +6,6 @@ Pillow
 scikit-learn
 joblib
 ultralytics==8.3.116
+xgboost
+ultralytics
+torch
